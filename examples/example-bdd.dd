@@ -1,0 +1,13 @@
+# this is a comment
+
+# empty lines are ignored
+@BDD     # this line denotes a start of a diagram definition and its type (standard BDD of Randy Bryant)
+# now follow some meta-data
+%Name example-bdd
+%Vars 100           # denotes variables x0..x99
+%Root 1             # id of the root node
+
+# the body follows now
+1[0] 2 3               # this denotes node id 1 with variable x0 going over L (low) to node id 2 and over H (high) to node id 3
+2[4] <0> 3             # in this case the node has variable x4, L goes to leaf *0*, and H goes to 3
+3[6] <1> <0>           # L goes to leaf *1* and H goes to leaf *0*
