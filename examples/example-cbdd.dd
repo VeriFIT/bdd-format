@@ -1,0 +1,8 @@
+@CBDD     # chain-reduced BDD of Randal Bryant
+%Name example-cbdd
+%Vars 100
+%Root 1
+
+1[first=0,last=5] 2 3                 # this denotes node id 1 with variables x0--x5
+2[first=10,last=10] <0> 3             # in this case the node has variable x10 (only)
+3[first=15,last=20] <1> <0>           # variablex x15--x20, L goes to leaf *1* and H goes to leaf *0*
