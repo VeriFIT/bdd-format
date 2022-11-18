@@ -1,0 +1,8 @@
+@ZDD     # zero-suppressed BDDs of Shin-ichi Minato
+%Name example-zdd
+%Vars 100
+%Root 1
+
+1[0] 2 3               # this denotes node id 1 with variable x0 going over L (low) to node id 2 and over H (high) to node id 3
+2[4] <0> 3             # in this case the node has variable x4, L goes to leaf *0*, and H goes to 3
+3[6] <1> <0>           # L goes to leaf *1* and H goes to leaf *0*
