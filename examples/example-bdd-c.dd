@@ -1,0 +1,9 @@
+@BDD-C     # BDDs with complemented edges
+%Name example-bdd-c
+%Vars 100
+%Root 1
+
+# the body follows now
+1[0] 2[c] 3            # this denotes node id 1 with variable x0 going over L (complemented) to node id 2 and over H to node id 3
+2[4] <0> 3
+3[6] <1> <1>[c]        # L goes to leaf *1* and H goes to leaf *0* (which is complemented edge to *1*)
