@@ -1,0 +1,10 @@
+@TBDD     # Tagged BDD of van Dijk, Wille, Meolic
+%Name example-tbdd
+%Vars 100
+%Root 1
+%First-reduction BDD
+%Second-reduction ZDD
+
+1[0] 2[tag=2] 3[tag=6] # this denotes node id 1 with variable x0 going over L to node id 2 with applying the first reduction rule until variable x2 and over H to node id 3
+2[4] <0> 3[tag=5]      # in this case the node has variable x4, L goes to leaf *0* (no tag), and H goes to 3, reducing according to BDD until x5 and then according to ZDD
+3[6] <1> <0>           # L goes to leaf *1* and H goes to leaf *0*
