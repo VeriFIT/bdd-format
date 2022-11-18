@@ -1,0 +1,8 @@
+@ESRBDD     # Edge-specified reduction BDDs of Babar, Jiang, Ciardo, Miner
+%Name example-esrbdd
+%Vars 100
+%Root 1
+
+1[0] 2[red=H1] 3[red=X]    # this denotes node id 1 with variable x0 going over L to node id 2 with applying the reduction rule H1 and over H to node id 3 applying reduction rule X
+2[4] <0>[red=X] 3          # in this case the node has variable x4, L goes to leaf *0* applying reduction rule X, and H goes to 3 over a *short* edge (no reduction rule)
+3[5] <1>[red=L0] <0>[H1]   # L goes to leaf *1* applying rule L0 and H goes to leaf *0* applying rule H1
