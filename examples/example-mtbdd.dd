@@ -1,0 +1,12 @@
+@MTBDD     # multi-terminal BDD
+%Name example-mtbdd
+%Vars 100           # denotes variables x0..x99
+%Root 1             # id of the root node
+%Domain Int         # domain of terminal nodes (Integers)
+
+# the body follows now
+1[0] 2 3               # this denotes node id 1 with variable x0 going over L (low) to node id 2 and over H (high) to node id 3
+2[4] 4 3               # in this case the node has variable x4, L goes to 4, and H goes to 3
+3[6] 5 4               # L goes to 5 and H goes to 4
+4[value="0"]           # 4 is a leaf node with value "0"
+5[value=42]            # 5 is a leaf with value 42
